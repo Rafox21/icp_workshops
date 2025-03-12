@@ -14,6 +14,7 @@ pub struct Response {
 }
 #[ic_cdk::update]
 async fn translate() -> String {
+    let token = "";
     let arg = CanisterHttpRequestArgument {
         url: "https://api-inference.huggingface.co/models/google-t5/t5-base".to_string(),
         max_response_bytes: None,
@@ -21,7 +22,7 @@ async fn translate() -> String {
         headers: vec![
            HttpHeader{
             name: "Authorization".to_string(),
-            value: "Bearer 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".to_string(),
+            value: format!("Bearer {}", token).to_string(),
            }
         ],
         body: Some(r#"(inputs:""What's up)"#.into()),
