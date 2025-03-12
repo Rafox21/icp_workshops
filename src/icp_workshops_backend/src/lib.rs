@@ -14,7 +14,7 @@ pub struct Response {
 }
 #[ic_cdk::update]
 async fn translate() -> String {
-    let token ="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"
+    let token =""
     let arg = CanisterHttpRequestArgument {
         url: "https://api-inference.huggingface.co/models/google-t5/t5-base".to_string(),
         max_response_bytes: None,
