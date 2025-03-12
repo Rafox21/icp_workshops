@@ -21,8 +21,8 @@ async fn translate() -> String {
         method: HttpMethod::GET,
         headers: vec![
            HttpHeader{
-            name: "Authorization".to_string(),
-            value: format!("Bearer {}", token).to_string(),
+            //name: "Authorization".to_string(),
+           // value: format!("Bearer {}", token).to_string(),
            }
         ],
         body: Some(r#"(inputs:""What's up)"#.into()),
